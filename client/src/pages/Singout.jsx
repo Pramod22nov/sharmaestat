@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
-
-export default function Singin() {
+import { errorHandler } from '../../../api/utils/error';
+import { bcryptjs } from 'b';
+import { errorHandler } from './../../../api/utils/error';
+import { jwt } from 'jsonwebtoken';
+export default function singout() {
   const [formData, setFormData] = useState({});
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
